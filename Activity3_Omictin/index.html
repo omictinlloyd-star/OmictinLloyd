@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My JS Practice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2> JavaScript Tutorial </h2>
+
+        <button onclick="Clickme()">Click Me</button>
+
+        <input type="text" id="userInput" placeholder="Type Something!">
+        <button onclick="showInput()">Show Input</button>
+        <p id="output"></p>
+
+        <p id="hoverText">idk what does it do!</p>
+    </div>
+
+    <script>
+        function Clickme() {
+            alert("Hello, Souprice!");
+        }
+
+        function showInput() {
+            let text = document.getElementById("userInput").value;
+            document.getElementById("output").innerText = text;
+        }
+
+        document.getElementById("hoverText").onmouseover = function () {
+            this.style.color = "blue";
+        };
+
+        document.getElementById("hoverText").onmouseout = function () {
+            this.style.color = "black";
+        };
+    </script>
+
+</body>
+</html>
